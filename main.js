@@ -40,3 +40,29 @@ const obs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 reveals.forEach(el => obs.observe(el));
+
+const navToggle = document.getElementById("navToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
+
+function closeMenu() {
+  navToggle.classList.remove("active");
+  mobileMenu.classList.remove("open");
+  overlay.classList.remove("active");
+}
+
+navToggle.addEventListener("click", () => {
+  navToggle.classList.toggle("active");
+  mobileMenu.classList.toggle("open");
+  overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", closeMenu);
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
+
+const mobileClose = document.getElementById("mobileClose");
+
+mobileClose.addEventListener("click", closeMenu);

@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Développeur web full-stack spécialisé PHP, Symfony et plus. Portfolio de projets et expériences.">
+  <meta name="description"
+    content="Développeur web full-stack spécialisé PHP, Symfony et plus. Portfolio de projets et expériences.">
   <title>Sébastien HOUSSEIN — Développeur Web</title>
   <link rel="icon" type="image/png" href="img/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,15 +19,19 @@
 <body>
 
   <header id="navbar">
+
     <nav class="nav-inner">
+
       <a href="#hero" class="nav-logo">Sébastien<span class="accent-dot">.</span><span
           class="nav-logo-sub">HOUSSEIN</span></a>
+
       <ul class="nav-links">
         <li><a href="#techno" class="nav-link">Stack</a></li>
         <li><a href="#presentation" class="nav-link">À propos</a></li>
         <li><a href="#realisations" class="nav-link">Réalisations</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+
       <a href="mailto:housseinseb@icloud.com" class="btn-primary btn-sm">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -34,8 +39,32 @@
         </svg>
         Me contacter
       </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </nav>
   </header>
+
+  <div class="mobile-overlay" id="overlay"></div>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Fermer le menu">
+      ✕
+    </button>
+
+    <a href="#techno">Stack</a>
+    <a href="#presentation">À propos</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#contact">Contact</a>
+
+    <a href="mailto:housseinseb@icloud.com" class="btn-primary btn-sm" style="margin-top:20px;">
+      Me contacter
+    </a>
+  </nav>
 
   <section id="hero">
     <div class="highlight highlight-1"></div>
@@ -169,7 +198,8 @@
           <p>Développeur d'applications avec déjà plus de 2 ans d'expérience dans une agence web, j'ai eu
             l'opportunité de travailler sur plus d'une trentaine de projets variés. </p>
           <p class="text-muted">Cette immersion m'a permis de devenir très
-            polyvalent : que ce soit pour coder from scratch, utiliser des frameworks comme Symfony, créer et utiliser des API ou
+            polyvalent : que ce soit pour coder from scratch, utiliser des frameworks comme Symfony, créer et utiliser
+            des API ou
             manipuler des CMS, je m'adapte rapidement aux besoins techniques.</p>
           <p class="text-muted">Pragmatique et passionné, je cherche aujourd'hui une alternance pour m'investir sur de
             nouveaux défis et continuer à progresser.</p>
@@ -199,7 +229,8 @@
       </div>
       <div class="projects-grid">
 
-        <a href="https://octogoneit.fr/" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.15s">
+        <a href="https://octogoneit.fr/" target="_blank" rel="noopener" class="project-card reveal"
+          style="transition-delay:.15s">
           <img src="img/octogone-fullpage.png" alt="Octogone IA" class="screenshot" />
           <div class="overlay">
             <div>
@@ -209,7 +240,8 @@
           </div>
         </a>
 
-        <a href="https://www.altiparc-aydat.fr/" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.1s">
+        <a href="https://www.altiparc-aydat.fr/" target="_blank" rel="noopener" class="project-card reveal"
+          style="transition-delay:.1s">
           <img src="img/altiparc-fullpage.png" alt="Altiparc Aydat" class="screenshot" />
           <div class="overlay">
             <div>
@@ -219,7 +251,8 @@
           </div>
         </a>
 
-        <a href="https://www.handis-industrie.com/" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.4s">
+        <a href="https://www.handis-industrie.com/" target="_blank" rel="noopener" class="project-card reveal"
+          style="transition-delay:.4s">
           <img src="img/handis-fullpage.png" alt="Handis Industrie" class="screenshot" />
           <div class="overlay">
             <div>
@@ -229,7 +262,8 @@
           </div>
         </a>
 
-        <a href="https://care-b.com/" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.2s">
+        <a href="https://care-b.com/" target="_blank" rel="noopener" class="project-card reveal"
+          style="transition-delay:.2s">
           <img src="img/careb-fullpage.png" alt="Care B" class="screenshot" />
           <div class="overlay">
             <div>
@@ -250,7 +284,8 @@
           </div>
         </a>
 
-        <a href="https://mrdesignetrenovation.com/" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.25s">
+        <a href="https://mrdesignetrenovation.com/" target="_blank" rel="noopener" class="project-card reveal"
+          style="transition-delay:.25s">
           <img src="img/mrdesign-fullpage.png" alt="Mr Design & Rénovation" class="screenshot" />
           <div class="overlay">
             <div>
@@ -260,7 +295,8 @@
           </div>
         </a>
 
-        <a href="https://puydenature.com/" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.35s">
+        <a href="https://puydenature.com/" target="_blank" rel="noopener" class="project-card reveal"
+          style="transition-delay:.35s">
           <img src="img/puydenature-fullpage.png" alt="Puy de Nature" class="screenshot" />
           <div class="overlay">
             <div>
@@ -270,7 +306,8 @@
           </div>
         </a>
 
-        <a href="https://alara-btp.fr/" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.3s">
+        <a href="https://alara-btp.fr/" target="_blank" rel="noopener" class="project-card reveal"
+          style="transition-delay:.3s">
           <img src="img/alara-fullpage.png" alt="Alara BTP" class="screenshot" />
           <div class="overlay">
             <div>

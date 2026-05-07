@@ -878,3 +878,131 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--light);
+    transition: all .3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: rgba(8, 13, 26, 0.98);
+    backdrop-filter: blur(12px);
+    border-left: 1px solid rgba(91, 141, 238, 0.15);
+    padding: 80px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transform: translateX(100%);
+    transition: transform .35s ease;
+    z-index: 1000;
+}
+
+@media (max-width: 500px) {
+    .mobile-menu {
+        width: 100%;
+    }
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-menu a {
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color .2s;
+}
+
+.mobile-menu a.btn-primary {
+    color: var(--light);
+    width: max-content;
+}
+
+.mobile-menu a:hover {
+    color: var(--light);
+}
+
+.mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 999;
+}
+
+.mobile-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar .btn-primary {
+        display: none;
+    }
+}
+
+.mobile-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--light);
+    font-size: 22px;
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity .2s, transform .2s;
+}
+
+.mobile-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
