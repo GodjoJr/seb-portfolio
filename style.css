@@ -257,6 +257,12 @@ body::before {
     z-index: 10;
 }
 
+@media (max-width: 1024px) {
+    .hero-inner {
+        flex-direction: column;
+    }
+}
+
 .hero-text {
     flex: 1;
     max-width: 576px;
@@ -267,8 +273,14 @@ body::before {
     font-weight: 800;
     line-height: 1.1;
     margin: 0 0 24px;
-    font-size: clamp(38px, 5vw, 64px);
+    font-size: 48px;
     color: var(--light);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
 }
 
 .hero-desc {
@@ -285,11 +297,24 @@ body::before {
     flex-wrap: wrap;
 }
 
+@media (max-width: 1024px) {
+    .hero-cta {
+        justify-content: center;
+    }
+}
+
 .hero-stats {
     display: flex;
     align-items: center;
     gap: 32px;
     margin-top: 48px;
+}
+
+@media (max-width: 1024px) {
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 .stat-value {
@@ -298,6 +323,12 @@ body::before {
     font-size: 24px;
     color: var(--light);
     margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .stat-value {
+        text-align: center;
+    }
 }
 
 .stat-label {
@@ -317,6 +348,13 @@ body::before {
     width: 380px;
     height: 420px;
     flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .hero-photo-wrap {
+        width: 300px;
+        height: 340px;
+    }
 }
 
 .hero-photo-wrap::before {
